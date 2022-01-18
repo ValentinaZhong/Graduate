@@ -1,0 +1,376 @@
+---
+title: "501 Project"
+author: "Valentina Zhong"
+date: "04/10/2021"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+# Introduction
+
+## 1.1 Incentives
+
+To think and research like an economist, MFRE student must actively gather knowledge of the rapidly changing world agri-food market dynamics throughout and after the course FRE501 strategic economic analysis of agri-food markets, which is also the step one to capture and develop own theories about economic trends. To comprehend and explain market dynamics, it is essential to learn about prices in many marketplaces, ranging from futures market prices for various commodities to spot market prices for people's everyday demands, and this is what inspired my team to build this course project on global price dynamics of crude oil.
+
+When it comes to the question why my team chose crude oil as the primary topic of the research, I am a strong believer that crude oil is not only a highly volatile commodity, in terms of chemical properties and risk associated with price fluctuation (Peng & Li, 2020, p. 4465), but also a vital element in global macroeconomics. Even though people are currently working hard on developing the alternate energy sourcing systems such as biofuel and hydrogen fuel and so on, petroleum still holds its place in many most important non-renewable energy resources in the world nowadays.
+
+For the point mentioned in the last paragraph that crude oil is a constantly significant factor in global macroeconomics, and the global petroleum industry, nonetheless, not only highly correlates with both regional and global economic growth, but also evolves rapidly in the global layout. On the grounds of the above comments on the project topic, the key features and major players (major importers and exporters) selected associated with crude oil industry are worth mentioning prior to technical analysis part.
+
+## 1.2 Key features of crude oil industry
+
+From a historical perspective of global crude oil industry, despite the fact that countries in the last century that are commonly well known for their economic performance is immensely dependent on local petroleum industry, such as the United States, Russia, Saudi Arabia and its other OPEC member states (Loutia & Mellios, 2016, p. 262-272) and so on, still remain as major players in the global crude oil industry that is always complicated, the whole dynamics evolves with production technology advancement and global economic progress, which leads to a few emerging players, such as Canada (Kralovic, 2018) and China (Wang & Sun, 2017, p. 483-490) and so on.
+
+For starter, one of many global crude oil industries features as mentioned above, crude oil industry highly correlates with economic trends. As an industry expands and society moves forwards, the energy need associated with such expansion and progression must follow to escalate, and vice versa. When it comes to gloom, instead of boom phrase, the energy need is expected to go down, which corresponds to the negative growth rate of crude oil demands during global financial crisis, specifically subprime mortgage crisis, from 2007 to 2008 (Kanjilal & Ghosh, 2017, p. 358-365). According to the most recent available data, the correlation between global GDP growth rate and global crude oil demand remains qualitatively strong, which supports further the first key feature of crude oil industry.
+
+Secondly, followed by chemical industry demand as in raw materials, the transportation remains its place as the greatest proportion of gasoline consumption which is closely associated with crude oil industry according to the data from International Monetary Fund and International Energy Agency.
+
+Thirdly, the United States has gained its place in major players on the crude oil supply side since its technology renovation in the crude oil production sector, which leads to the current situation that the United States and Russia and Saudi Arabia, as major crude oil supplier countries, possess the leverage to influence global crude oil price. Consequently, the OPEC's market power has diminished in recent years (Kisswani, 2016, p. 171-180), but it remains its place as major global crude oil producer in the long run.
+
+Last but not least, it is observed that light crude oil has been raising in terms of production majorly in the United States as mentioned in last paragraph and northwestern part of Europe, and yet the heavy crude oil production has shrunken in conventional crude oil supply regions like Iraq and Venezuela according to the data from the Eni S.p.A., an Italian multinational fossil fuel company.
+
+## 1.3 Selected countries or regions
+
+In this project, my team conduct research among countries which are associated with either major crude oil futures trading or petroleum production. The countries or regions in this project are the United States, the People's Republic of China and Europe, which the relevant contexts will be provided upon.
+
+The United States, historically playing a main role of crude oil importer and massive consumption associated with it, has gradually shifted its position in terms of global crude oil industry in the last decade. As production technology has evolved across time in the United States, it has been stated that the United States has realized the energy independency with low extraction cost associated with shale oil production, which contributes to such rapidly changing global crude oil industry as the United States also plays a role of major exporter nowadays. Similar case also applies to Canada with its rich reserve in oil sands located in the northern Alberta (Kralovic, 2018), which shortly describes how the North America countries has raised with their market influence in the global crude oil industry. In this project, my team will utilize analytical tools (explanatory modeling and price comparison in R programming) to take a close look into the dynamics that involves with majorly the United States and China.
+
+China, on the other hand, has been chosen as the main target to conduct research and analysis upon. Historically speaking, China has risen expeditiously since the economic reform since the end of last century (Naughton, 1995), which corresponds to its, on average, constantly growing demand for fossil fuel across the associated timeline. Nonetheless, its remarkable economic growth came with prices. It has been worldwide well known that environmental problem in China has emerged since the last decade as one of many consequences of its economic structural reform and associating growth in chemical industry and fossil fuel industry. In the current global crude oil industry, China makes strategic decisions with its massive buyer power gained from its domestic growth and associating high demand, which implicitly but undoubtedly influences its importing price or even global crude oil prices as the major crude oil export and producer countries, such as the United States and Saudi Arabia and Russia, make strategic moves towards each other on the global crude oil supply side.
+
+## 1.4 Roadmap and objectives
+
+My team primarily follows the template suggested as minimum by Dr. Vercamman, and it has been modified slightly to cooperate with our customized topic. The brief structure and roadmap of this project will be presented as follow.
+
+Firstly, for bullet point 1 in the template, my team composes a pie chard to illustrate the trading pattern among the United Stated (exporter) and a group of countries (importers) consist of China, South Korea, Italy and German, according to the data from UN comtrade in 2020.
+
+Secondly, for point 2, an animation is created to demonstrate the changes in importing prices in the above importers across a 2-year timeline, which is believed to facilitate answering questions like (1) why China shows a below average importing prices and (2) why the United States play both roles as major exporter and importer, according to the data from OECD from 2000 to 2020.
+
+Thirdly, for point 3a, based on the port located in the New York city, my team examines the relationship between shipping distance (in mile) and price spread (in USD). The shipping distances are collected from importing countries consist of Australia, China, German and Dutch, according to the data from OECD, Investing.com and CEIC in 2020.
+
+Fourthly, for point 3b, a line graph is created to present the relationship between the movements in China and U.S.' local crude oil futures prices, which is expected to help examine the degree of market integration. Given the deviation from what we would expect, the extended part (3b_cont.) of this section is developed with the collaboration of variables exchange rate and transportation cost in order to comprehend such anomaly.
+
+Lastly, my team has run a few simple liner regressions to investigate the change rate in exchange rate and crude oil return, which deems to help further comprehend the exchange rate variable that is closely connected to various parts of this project.
+
+Other than completed items listed above, the main objectives of this project are to provide and investigate, under Dr. Vercamman's guidance, (1) the overview of global crude oil trade among major players, (2) how LOP applies in the syntax of crude oil industry and (3) how exchange rate interacts with crude oil futures prices for they are significant economic indicators.
+
+```{r packages, echo=F}
+
+pacman::p_load(here, rjson, dplyr, ggplot2, gridExtra, kableExtra, comtradr, tidyverse, lubridate, ggthemes, ggrepel, cansim, janitor, gganimate, gifski, png, magrittr, SciViews)
+```
+
+# Methodology
+
+## 2.1 Import Shares
+
+As we mentioned before, the USA is one of the largest exporters in the world. In this report, we will focus on the export market in the USA. Therefore, a pie chart was designated to facilitate the analysis on the market share of different importers. The data are collected from [UN Comtrade](https://comtrade.un.org/data/). Besides use the function `ct_search()` to extract data, we also designed a data frame `A_final` to store and sort these data. Since the volumes of import are always more than billion, especially the volume of the world, we divided the amount by 1000 to make it more readable. Also, a column includes the unit of the volume inserted and all column names are renamed reasonably by their meaning. For the pie chart, `US_exports` is the data frame used to save the import share.
+
+In the import share analysis, two main importers from Asia (China and South Korea) and two from Europe (Germany and Italy) were selected. In the graph, China is greatest importer in American export market, which accounts for more than 15%. The export volume to these four countries occupies around one-third of the total export volume in the American crude oil export market. Also, the total export volume to the two Asian countries is almost 4 times more than the total volume of export to those two European countries. Thus, it is more worthy analyzing the Asian importer. Furthermore, Europe and the United States have direct trade preferences and agreements.
+
+```{r import_share, echo=F}
+dfA <- ct_search(reporters = "USA",
+                 partners = c("China", "Rep. of Korea", "Italy", "Germany", "World"),
+                 trade_direction = "exports",
+                 start_date = "2020-01",
+                 end_date = "2020-12",
+                 commod_codes = c("270900"))   
+
+saveRDS(dfA, file = here("Data", "dfA.RDS"))
+UNC <- readRDS(here("Data", "dfA.RDS"))
+
+A_final <- dfA %>%
+  mutate(Weight.A = as.numeric(qty)/1000,
+         Unit.A = "tonnes") %>%
+  select(partner, reporter, commodity_code, year, trade_flow, Unit.A, Weight.A) %>%
+  rename(Exp.A = reporter,
+         Imp.A = partner,
+         Comm.A = commodity_code, 
+         Year.A = year,
+         Type.A = trade_flow) %>%
+  arrange(Weight.A)
+
+A_final <- A_final %>% 
+  mutate(share = Weight.A / Weight.A[n()])
+
+China <- A_final[4,"Weight.A"]
+Germany <- A_final[1,"Weight.A"]
+Italy <- A_final[2,"Weight.A"]
+Korea <- A_final[3,"Weight.A"]
+world <- A_final[5,"Weight.A"]
+other <- world - (China + Germany + Italy + Korea)
+
+USA_exports <- data.frame(region = c("China", "Germany", "Italy", "Korea", "Other", "World"),
+                                exports = c(China, Germany, Italy, Korea, other, world))
+
+USA_exports <- USA_exports %>%
+  arrange(exports) %>%
+  mutate(share = exports / exports[n()] * 100,
+         labels = paste0(round(exports / exports[n()] * 100, 2), "%")) %>%
+  filter(region != "World")
+
+market_share <- ggplot(USA_exports, aes(x = "", y = share, fill = region)) +
+  geom_bar(width = 1, stat = "identity") +
+  coord_polar("y", start = 0) +
+  geom_text(aes(label = labels), position = position_stack(vjust=0.45), size = 3) +
+  labs(title = "USA Export Shares") + 
+  scale_fill_brewer(name = "Region", palette = "Spectral") + 
+  theme_void()
+
+market_share
+```
+
+## 2.2 Price Change Over Time in Different Countries
+
+Besides the quantity traded in American crude oil export market, price is another most important factor used in economic analysis. The import prices of different countries for past 20 years are collected from [OECD](https://data.oecd.org/energy/crude-oil-import-prices.htm) and the import price of China is fetched from [CEIC](https://insights-ceicdata-com.eu1.proxy.openathens.net/Untitled-insight/myseries). We choose 3 Asian countries, 3 European countries, Australia and USA. It is believed that including the United State, that is treated as importer and exporter at the same time, facilitates comparing the export price as well as import price within the same country in the later section.
+
+To make it more interesting, animation was used in this part, which can show the difference of the import price among different countries and the movement during past 20 years at the same time. In the animation, the import prices ranked from high to low are Australia, Japan, South Korea, Germany, China and Netherlands. As the world's largest crude oil importer, China has the advantages in the price negotiation. Combined with its strategies in crude oil import, it is reasonable that the import price in China will be lower than the other Asian countries and even close to the European countries. unsurprisingly, the American's import price is the lowest. That's because it is also an export country and its import price may be influenced by its lower export price. it has more space to negotiate. The Law of One Price will be used to try to analyze this order.
+
+```{r import_price, message = F, warning = F, echo = F}
+Import_raw <- read.csv(here("Data", "Import price.csv"), header=TRUE, sep=",", stringsAsFactors = FALSE)
+provlist <- c("CHN", "KOR", "JPN", "NLD", "AUS", "DEU", "ITA", "USA")
+
+df_imp <- Import_raw %>% 
+  filter(LOCATION %in% provlist) %>%
+  select(LOCATION, MEASURE, TIME, PRICE=Value)
+
+plot_Impoter <- ggplot(df_imp, aes(LOCATION, PRICE, fill = LOCATION, label=PRICE)) +
+  geom_col() 
+
+plot_imp <- plot_Impoter +
+  geom_text(vjust=-0.1) +
+  scale_fill_viridis_d() +
+  scale_y_continuous(labels=scales::dollar) + 
+  theme_tufte(base_size = 12) +
+  theme(legend.position = "none",
+        axis.ticks = element_blank()) +
+  labs(title = "Year: {frame_time}", x = "", y = "Price (USD/barrel)", )
+
+plot_imp + 
+  transition_time(TIME)
+
+
+```
+
+## 2.3 The Law of One Price Analysis
+
+The spatial law-of-one-price (LOP) will be also examined in the crude oil trade between China and the United State. For a homogeneous good, trade between two countries occurs when their price difference is the same as the transportation cost, which is LOP (Stigler and Sherwin, 1985) That also means two countries will stop trading as the price gap lower than the transportation cost. If the price difference is greater than the transportation cost, the arbitrage will take place. Finally, more volume will export than the price will decrease until the gap of price is the same as the transportation cost.
+
+### 2.3.1 Price Difference V.S. Shipping Distance
+
+If the law of one price hold, the price gap between exporters and importers should increase as the shipment distance goes up. The export price of America in 2020 is calculated by the data fetch from [Investing.com](https://www.investing.com/commodities/crude-oil). Since Investing only record the data monthly, we use arithmetic mean of monthly data in 2020 as the export price of the United State in 2020. The data of shipping distance is collected from [seadistance](https://sea-distances.org/). New York & New Jersey port as the export port of America, since it is one of the largest export port in the United State. We merged the variable of shipment distance and the import/export price table to make it easy to compare.
+
+We chose China, Australia, Netherlands and Germany to examine whether the LOP holds or not, since they can represent three various shipping routes. From the table, the country whose shipping distance is greater its price difference tends to greater at the same time.Therefore, we can roughly conclude that the LOP holds in this case study.
+
+```{r, layout="1-body-outset", message=FALSE, warning=FALSE, echo=FALSE}
+# create variable
+US_exp_price <- 38.60
+
+provlist2 <- c("CHN", "NLD", "AUS", "DEU")
+imp_price <- Import_raw %>%
+  filter(TIME == "2020",
+         LOCATION %in% provlist2) %>%
+  select(region=LOCATION, PRICE=Value)
+
+Netherlands_dist <- 3411
+Germany_dist <- 3785
+China_dist <- 10638
+Australia_dist <- 12873
+
+# create df
+imp_dist <- data.frame(region = c("AUS", "CHN", "DEU", "NLD"),
+                          shipping_distance = c(Australia_dist, China_dist, Germany_dist, Netherlands_dist))
+
+# create table
+pdiff_distance <- imp_dist %>%
+  mutate(import_price = as.numeric(imp_price$PRICE),
+         export_price_US = US_exp_price,
+         price_diff = import_price-export_price_US) %>%
+  select(region, import_price, export_price_US, price_diff,shipping_distance) %>%
+  arrange(price_diff) 
+
+pdiff_distance <- pdiff_distance %>%
+  kbl() %>%
+  kable_material(c("striped", "hover"))
+
+pdiff_distance
+```
+
+### 2.3.2 CNY Price Versus USD Price
+
+For the further analysis on the LOP and the exchange rate effect, local price in China and USD were extracted to compared. The data for settlement price in CNY is from [CEIC](https://insights-ceicdata-com.eu1.proxy.openathens.net/Untitled-insight/myseries) and the price in USD is from [Investing.com](https://www.investing.com/commodities/crude-oil). Both of them are the price from local future exchanges, which will assist in reducing the bias. `CHN_local` was created to store the data of China and `US_local` stored the data of the United States. `plot_china` and `plot_USA` render the line graph of China and America separately.
+
+With the comparing of these two graph, the movement and tendency of the price in CNY are similar to the changing of price in USD. The dramatic decreasing of the crude oil price in first half of 2020 is shown in both countries. However, the extents of fluctuations are not the same exactly, which means there are similar but not perfect match. Mr. Kaufmann and Mr. Banerjee explained the global market and price difference from various countries cloud be infludenced by physical, technical, political and economic barriers (2014), which can also indicate there are differences in the movement of crude oil price from various countries' markets. Besides the factors mentioned by Mr. Kaufmann and Mr. Banerjee, we will try to use the movement of exchange rate to explained those variance.
+
+It is interesting that this model can not only explain the law of one price is efficient in this study case but also relate to comment of pricing integration. In Module 1D, we know LOP is a significant assumption to pricing integration. Even their price movement are not exactly the same, it still represent pricing integration to a certain degree.
+
+```{r CN_US, message = F, warning = F, echo=F}
+# load data
+CHN_local <- read.csv(here("Data", "CN settlement price SH Furture Exchanges.csv"), header=TRUE, sep=",", stringsAsFactors = FALSE)
+CHN_local$Date <- seq(as.Date("2018/9/1"), by = "month", length.out = 36)
+US_local <- read.csv(here("Data", "US Crude Oil WTI Futures.csv"), header=TRUE, sep=",", stringsAsFactors = FALSE)
+US_local$Date <- seq(as.Date("2018/9/1"), by = "month", length.out = 36)
+US_local <- US_local %>%
+  select(Date, Price)
+
+# Create a data frame for price comparison analysis 
+dfcu <- CHN_local %>%
+  mutate(US_price = US_local$Price,
+         CHN_price = Price) %>%
+  select(Date, CHN_price, US_price)
+
+# Plot the two price series side by side
+plot_china <- ggplot(CHN_local, aes(x = Date, y = Price)) +  
+  geom_line() + 
+  labs(title = "Chinese Price", y= "CNY/barrel", x = "Date") + 
+  theme(plot.title = element_text(size=10))
+
+plot_USA <- ggplot(US_local, aes(x = Date, y = Price)) +  
+  geom_line() + 
+  labs(title = "American Price", y = "US$/barrel", x = "Date") + 
+  theme(plot.title = element_text(size=10))
+
+grid.arrange(plot_china, plot_USA, ncol = 2) 
+```
+
+### 2.3.3 Analysis of Price Spread with LOP
+
+There may be almost 30% of the price difference can be explained by the transportation cost (Giulietti and Iregui, 2015). To test if the LOP hold exactly, we decided to analyze the price spread and calculate the arithmetic mean of the price spread to compared with the transportation cost. The data of price spread is irregular after 2020, which can be seen in the first picture.
+
+```{r pspread, message = F, warning = F, echo=F}
+# Import exchange rate data
+exchange_rate <- read.csv(here("Data", "USD_CNY Data.csv"), header=TRUE, sep=",", stringsAsFactors = FALSE)
+exchange_rate$Date <- seq(as.Date("2018/9/1"), by = "month", length.out = 36)
+exchange_rate <- exchange_rate %>%
+  select(Date, exchange_rate = Price)
+
+# Create a table contained price ratio and exchange rate
+pr_er <- dfcu %>%
+  mutate (priceRatio = CHN_price/US_price, 
+          exchangeRate = exchange_rate$exchange_rate)
+# Analysis of Price Spread
+priceSpread <- mutate(pr_er, spread = (CHN_price/exchangeRate - US_price))
+
+plot_Spread <- ggplot(priceSpread, aes(x = Date, y = spread)) +
+  geom_line() +
+  labs(title = "Chinese - USA Price Spread", y= "US$/barrel", x = "Date") +
+  theme(plot.title = element_text(size=10)) +
+  geom_hline(yintercept = mean(priceSpread$spread), color="blue")
+plot_Spread
+
+# focus on the data before April 2020
+priceSpread2 <- priceSpread %>%
+  slice(1:20)
+```
+
+To make the analysis proper, only the data before 2021 will be used. Finally, we found the mean is around \$12, which coincides with the transportation cost reported by Bloomberg News during the trade war period (Cho and Cheong, 2020). That means the LOP hold efficiently in this analysis.
+
+```{r pspread2, message = F, warning = F, echo=F}
+plot_Spread2 <- ggplot(priceSpread2, aes(x = Date, y = spread)) +
+  geom_line() +
+  labs(title = "Chinese - USA Price Spread before April 2020", y= "US$/barrel", x = "Date") +
+  theme(plot.title = element_text(size=10)) +
+  geom_hline(yintercept = mean(priceSpread2$spread), color="blue")
+plot_Spread2
+
+# It is almost the same as the data reported of Bloomberg in the trade war
+```
+
+## 2.4 Analysis of the Exchange Rate Impacts
+
+The change in exchange rate is an important factor to analysis the different between two local prices. Here, we isolate the exchange rate impacts to compare it with crude oil price ratio between these two countries. The data of exchange rate between CNY and USD is collected from [Investing.com](https://www.investing.com/currencies/usd-cny). Surprisingly, the differences in these two line graph are significant. The movement of price ratio rate is dramatically greater than the real exchange. And the index of price ratio is much higher than the exchange rate. That means when CNY strengthened against the US dollar, the weakened occurred in the local market price. Chinese importer are paying USD for their crude oil shipment and these USD are converted back to CNY the amount paid less. The huge movement of price ratio in the first half of 2020 might be caused by the trade war between the USA and China. Therefore, the difference of movement between Chinese price and American price can be partially explained by exchange rate but not all.
+
+```{r exchange_rate, message = F, warning = F, echo=F}
+# Isolating the Exchange Rate Impact
+
+plot_PriceRatio <- ggplot(pr_er, aes(x = Date, y = priceRatio)) +  
+  geom_line() + 
+  labs(title ="CHN-USA Price Ratio", y= "Ratio", x = "Date")+ 
+  theme(plot.title = element_text(size=10))
+
+
+plot_Exchange <- ggplot(pr_er, aes(x = Date, y = exchangeRate)) +  
+  geom_line() + 
+  labs(title = "CNY-USD Exchange", y= "CNY per One US$", x = "Date") + 
+  theme(plot.title = element_text(size=10))+
+  ylim(6,13)
+
+render_pr_er <- pr_er %>%
+  kbl() %>%
+  kable_material(c("striped", "hover"))
+
+render_pr_er
+
+grid.arrange(plot_PriceRatio, plot_Exchange, ncol = 2) 
+```
+
+## 2.5 Regressions
+
+### 2.5.1 Regression Between Change in Exchange Rate and Crude Oil Return
+
+Our main topic is about the relation between the change in exchange rate and the movement in crude oil price. Firstly, a regression about how crude oil return can affect the change in exchange rate. However, the p value for estimator b_2 is too large. Therefore, we have no sufficient evident to conclude that there is a statistically correlation between crude oil return and the change in exchange rate overtime.
+
+```{r regression_return, message = F, warning = F, echo=F}
+# Regression of Spread on Corn Transport Cost
+E <- (pr_er$exchangeRate - lag(pr_er$exchangeRate,1))
+priceSpread <- mutate(pr_er, spread = (CHN_price/exchangeRate - US_price))
+P <- (log(pr_er$CHN_price)-log(lag(pr_er$CHN_price,1)))
+lmE <- lm(E~P, data = pr_er)
+summary(lmE)
+```
+
+### 2.5.2 Regression Between Change in Exchange Rate and Gold Return
+
+Is it because crude oil has no direct relation with exchange rate? For further analysis, gold price was selected to do a similar regression as the previous one, since we know USD is pegged to gold. The data of gold price is collected from [Investing.com](https://www.investing.com/commodities/gold). However, the model is still not hold. The return on gold have no strong relation with the exchange rate changing.
+
+```{r regression_pg, message = F, warning = F, echo=F}
+
+gold_price <- read.csv(here("Data", "Gold Futures Historical Data.csv"), header=TRUE, sep=",", stringsAsFactors = FALSE)
+gold_price$Date <- seq(as.Date("2018/9/1"), by = "month", length.out = 36)
+df_gp <- pr_er %>%
+  mutate(goldPrice = gold_price$Price) %>%
+  select(Date, goldPrice, exchangeRate)
+Pg <- (log(df_gp$goldPrice)-log(lag(df_gp$goldPrice,1)))
+lmEg <- lm(E~Pg, data = df_gp)
+summary(lmEg)
+```
+
+### 2.5.3 Regression Between Exchange Rate and Price of Crude Oil
+
+Finally, a regression about crude oil price and exchange rate was developed. There is a sufficient evident that the significant linear relationship exists between variables.
+
+```{r regression_p, message = F, warning = F, echo=F}
+lma <- lm(pr_er$exchangeRate ~ pr_er$CHN_price)
+summary(lma)
+```
+
+# Conclustion
+
+As stated in the introduction section, our conclusions drawn from this project also consist of three parts as following Firstly, within the scope of limited research in this project, the major countries that are significantly involved with global crude oil trade are often playing roles in both exporter and importer, which contributes to such rapidly changing global crude oil industry. Secondly, it is obtained a sufficient amount of evidences to demonstrate, in general, the spatial law of one price holds in the syntax of global crude oil industry. Thirdly, the exchange rate, surprisingly, is proved to be a significant factor when it comes to comprehend the dynamics of global crude oil prices in the local futures markets.
+
+As for limitations of this project, other than regression models are over simplified, our major limitations consist of the following two points: (1) it is assumed that U.S. crude oil futures prices are valid proxies for U.S. export prices, which seems unrealistic to my team. (2) my team chooses the local futures prices, other than import price and export price, in China and U.S. to examine the price dynamics, which is also a faulty assumption to make.
+
+# References
+
+Giulietti, M., Iregui, A. M., & Otero, J. (2015). A pair-wise analysis of the law of one price: Evidence from the crude oil market. Economics Letters, 129, 39-41. <https://doi.org/10.1016/j.econlet.2015.02.002>
+
+Kanjilal, K., & Ghosh, S. (2017). Dynamics of crude oil and gold price post 2008 global financial crisis -- new evidence from threshold vector error-correction model. Resources Policy, 52, 358-365. <https://doi.org/10.1016/j.resourpol.2017.04.001>
+
+Kaufmann, R. K., & Banerjee, S. (2014). A unified world oil market: Regions in physical, economic, geographic, and political space. Energy Policy, 74, 235-242. <https://doi.org/10.1016/j.enpol.2014.08.028>
+
+Kisswani, K. M. (2016). Does OPEC act as a cartel? empirical investigation of coordination behavior. Energy Policy, 97, 171-180. <https://doi.org/10.1016/j.enpol.2016.07.013>
+
+Kralovic, P., Kralovic, & desLibris - Documents. (2018). Economic and environmental assessment of eastern canadian crude oil imports. Canadian Energy Research Institute.
+
+Loutia, A., Mellios, C., & Andriosopoulos, K. (2016). Do OPEC announcements influence oil prices? Energy Policy, 90, 262-272. <https://doi.org/10.1016/j.enpol.2015.11.025>
+
+Marie Plummer Minniear (2000) Forecasting the Permanent Decline in Global Petroleum Production, Journal of Geoscience Education, 48:2, 130-136, DOI: 10.5408/1089-9995-48.2.130
+
+Naughton, B. (1995). Growing out of the plan: Chinese economic reform, 1978-1993. Cambridge University Press. <https://doi.org/10.1017/CBO9780511664335>
+
+Peng, J., Li, Z., & Drakeford, B. M. (2020). Dynamic characteristics of crude oil price Fluctuation---From the perspective of crude oil price influence mechanism. Energies, 13(17), 4465. <doi:http://dx.doi.org/10.3390/en13174465>
+
+Sharon, C. & Serene, C. (2020, April 1). Shipping U.S. Oil to China Now Costs Half as Much as the Cargo. Bloomberg. <https://www.bnnbloomberg.ca/shipping-u-s-oil-to-china-now-costs-half-as-much-as-the-cargo-1.1416063>
+
+Stigler, G. J., & Sherwin, R. A. (1985). The extent of the market. The Journal of Law and Economics, 28(3), 555-585.
+
+Wang, Q., & Sun, X. (2017). Crude oil price: Demand, supply, economic activity, economic policy uncertainty and wars -- from the perspective of structural equation modelling (SEM). Energy (Oxford), 133, 483-490. <https://doi.org/10.1016/j.energy.2017.05.147>
